@@ -1,0 +1,9 @@
+div.img_display {
+    float: right;
+    height: 120px;
+    margin-top: 30px;
+    overflow: auto;
+    width: 500px;
+	margin-left:100px;
+}
+div.img_display .del_icon{ position: absolute; left: 0; top: 0;}
