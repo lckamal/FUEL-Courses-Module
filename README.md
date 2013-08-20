@@ -12,6 +12,7 @@ I was struggling to find a module which shows both frontend and backend operatio
 - copy course to fuel/modules/
 - Add course to $config['modules_allowed'] array in your fuel/application/config/MY_fuel.php
 - Install table using fuel/modules/course/install/fuel_course_install.sql
+- For more detail see step by step tutorial <a href="http://lkamal.com.np/blog/fuel-cms-how-to-make-advanced-module">here</a>
 
 
 
