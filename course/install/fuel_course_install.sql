@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `module_articles` (
   `slug` varchar(200) NOT NULL,
   `description` text NULL,
   `type` enum('link','article') NOT NULL DEFAULT 'link',
+  `redirect` VARCHAR(255) NULL,
   `lesson_id` int(11) NOT NULL,
   `published` enum('yes','no') NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`)

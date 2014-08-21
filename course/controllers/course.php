@@ -3,7 +3,6 @@ require_once(MODULES_PATH.'/course/libraries/Course_base_controller.php');
 
 class Course extends Course_base_controller {
 	
-
 	function __construct()
 	{
 		parent::__construct();

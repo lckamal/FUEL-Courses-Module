@@ -34,6 +34,8 @@ class Course_base_controller extends CI_controller {
 		
 		$layout = (! empty($layout) ) ? $layout : 'main';
 		$output = $this->load->view('_layouts/'.$layout, $vars, TRUE);
+        $output = $this->fuel_pages->cms_render(TRUE, FALSE);
+
 		$this->load->module_library(FUEL_FOLDER, 'fuel_pages');
 		$this->fuel_pages->initialize();
 		$output = $this->fuel_page->fuelify($output);

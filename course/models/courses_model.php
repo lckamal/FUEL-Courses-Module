@@ -11,10 +11,8 @@ class Courses_model extends Base_module_model {
 	);
     function __construct()
     {
-		$CI =& get_instance();
-		$this->config->module_load(COURSE_FOLDER, COURSE_FOLDER);
-		$this->_tables = $CI->config->item('tables');
-        parent::__construct($this->_tables['courses']);
+		
+        parent::__construct('module_courses', COURSE_FOLDER);
 
         $this->load->module_model(COURSE_FOLDER, 'lessons_model');
     }

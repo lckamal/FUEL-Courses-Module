@@ -14,12 +14,10 @@ class Articles_model extends Base_module_model {
 	public $foreign_keys = array(
 		'lesson_id' => array('course' => 'lessons_model')
 	);
+
     function __construct()
     {
-		$CI =& get_instance();
-		$CI->config->module_load(COURSE_FOLDER, COURSE_FOLDER);
-		$this->_tables = $CI->config->item('tables');
-        parent::__construct($this->_tables['articles']);
+        parent::__construct('module_articles', COURSE_FOLDER);
     }
  
 
@@ -41,4 +39,8 @@ class Articles_model extends Base_module_model {
 }
  
 class Article_model extends Base_module_record {
+    function on_init()
+    {
+        $this->_tables = $this->_CI->config->item('tables');
+    }
 	}

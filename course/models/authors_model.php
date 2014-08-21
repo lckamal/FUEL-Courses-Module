@@ -11,14 +11,11 @@ class Authors_model extends Base_module_model {
 	);
     function __construct()
     {
-		$CI =& get_instance();
-		$CI->config->module_load(COURSE_FOLDER, COURSE_FOLDER);
-		$this->_tables = $CI->config->item('tables');
-        parent::__construct($this->_tables['authors']);
+        parent::__construct('module_authors', COURSE_FOLDER);
     }
  
 
-	 function list_items($limit = NULL, $offset = NULL, $col = 'author_name', $order = 'asc')
+	function list_items($limit = NULL, $offset = NULL, $col = 'author_name', $order = 'asc')
 	{
 		$data = parent::list_items($limit, $offset, $col, $order);
 		return $data;

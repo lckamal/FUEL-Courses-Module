@@ -56,9 +56,8 @@ $config['course']['pagination'] = array(
 
 
 // tables for course
-$config['tables'] = array(
-	'courses'				=> 'module_courses',
-	'lessons' 				=> 'module_lessons',
-	'articles' 				=> 'module_articles',
-	'authors' 				=> 'module_authors'
-);
+$config['tables']['courses'] = 'module_courses';
+$config['tables']['lessons'] 				= 'module_lessons';
+$config['tables']['articles'] 				= 'module_articles';
+$config['tables']['authors'] 				= 'module_authors';
+
